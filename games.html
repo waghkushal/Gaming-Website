@@ -1,0 +1,168 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Container</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .primary-navbar {
+            background-image: url(images/right-bg-decor.png);
+
+
+
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            width: 100%;
+            height: 117px;
+
+        }
+
+
+
+        .section-game-container h1 {
+            font-size: 3.3rem;
+            margin-left: 36%;
+            margin-top: 5%;
+        }
+
+        .section-game-container h1 span {
+            color: #fba70b;
+        }
+
+        .first-game {
+            display: flex;
+            flex-flow: column;
+            height: 438px;
+            margin-top: 47px;
+        }
+
+
+        .first-game img {
+            height: 390px;
+            width: 60%;
+            border: 1px solid #a76c00;
+            margin-top: 48px;
+            border-radius: 17px;
+            margin-left: 103px;
+        }
+
+        .first-game h1 {
+            font-size: 2.1rem;
+            color: #bd6203;
+            margin-left: 167px;
+            margin-top: 15px;
+        }
+
+        .first-game button a {
+            text-decoration: none;
+            font-size: 1.3rem;
+            color: white;
+
+        }
+
+        .first-game button {
+            background: #a76c00;
+            width: 15%;
+            border: none;
+            border-radius: 10px;
+            padding: 5px;
+            margin-left: 236px;
+            font-size: -3.7rem;
+            margin-top: 10px;
+        }
+
+        .second-game {
+            display: flex;
+            flex-flow: column;
+            height: 438px;
+            margin-top: 47px;
+        }
+
+
+        .second-game img {
+            height: 390px;
+            width: 60%;
+            border: 1px solid #a76c00;
+            margin-top: 48px;
+            border-radius: 17px;
+            margin-left: 103px;
+        }
+
+        .second-game h1 {
+            font-size: 2.1rem;
+            color: #bd6203;
+            margin-left: 167px;
+            margin-top: 15px;
+        }
+
+        .second-game button a {
+            text-decoration: none;
+            font-size: 1.3rem;
+            color: white;
+
+        }
+
+        .second-game button {
+            background: #a76c00;
+            width: 15%;
+            border: none;
+            border-radius: 10px;
+            padding: 5px;
+            margin-left: 250px;
+            font-size: -3.7rem;
+            margin-top: 10px;
+        }
+
+        .two-games {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="primary-navbar">
+        <h1>SportX</h1>
+        <nav class="navigation-menu">
+            <ul class="list">
+                <li class="item"><a href="index.html">Home</a></li>
+
+                <li class="item"><a href="games.html">Games</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="section-game-container">
+        <h1>My Best <span>Games</span></h1>
+
+        <div class="two-games">
+
+            <div class="first-game">
+                <img src="images/whack-game.png" alt="">
+                <h1>Whack The Mole</h1>
+                <button><a href="Whack The Mole/whack the mole.html">PLAY</a></button>
+            </div>
+            <div class="second-game">
+                <img src="images/shoot-game.png" alt="">
+                <h1>Shoot The Enemy</h1>
+                <button><a href="shoot the enemy/index.html">PLAY</a></button>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>
