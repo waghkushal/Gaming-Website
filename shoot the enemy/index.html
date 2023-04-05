@@ -1,0 +1,127 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<style>
+    body {
+        cursor: none;
+    }
+
+    * {
+        cursor: none;
+    }
+
+    .cursor {
+        position: absolute;
+        height: 100px;
+        z-index: 2;
+        transform: translate(-63px, -65px);
+        pointer-events: none;
+
+    }
+
+    .audioBtn {
+        color: black;
+        border: 2px solid blue;
+        border-radius: 8px;
+
+    }
+
+    .back-music {
+        position: relative;
+        top: 22px;
+        border: 2px solid blue;
+        border-radius: 8px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <button type="button" class="startBtn">START GAME</button>
+
+
+        <img src="images/blood-spot.png" alt="Blood Spot" class="bloodspot" />
+        <!-- <img src="images/enemy.jpeg" alt="enemy" class="image"> -->
+        <img class="cursor" src="images/aim33.png" alt="">
+    </div>
+
+    <audio src="gun-shot.mp3" class="audio"></audio>
+
+   
+
+
+    <script>
+        const cursor = document.querySelector(".cursor");
+        window.addEventListener("mousemove", (e) => {
+            cursor.style.top = e.pageY + "px";
+            cursor.style.left = e.pageX + "px";
+
+        });
+        const bloodspot = document.querySelector(".bloodspot");
+        window.addEventListener("click", (e) => {
+            bloodspot.style.top = e.pageY + "px";
+            bloodspot.style.left = e.pageX + "px";
+            
+
+            if (e.target == enemy) score++;
+            if (e.target == enemy) playAudio();
+
+            startBtn.innerText = "SCORE: " + score;
+
+
+        });
+
+        const container = document.querySelector(".container");
+
+        const contHeight = container.offsetHeight;
+        const contWidth = container.offsetWidth;
+
+        const enemy = document.createElement("img");
+        enemy.setAttribute("class", "enemy");
+        enemy.setAttribute("src", "images/enemy-head3.png");
+
+        setInterval(() => {
+            const randTop = Math.random() * (contHeight - 109);
+            const randLeft = Math.random() * (contWidth - 109);
+
+            enemy.style.position = "absolute";
+            enemy.style.top = randTop + "px";
+            enemy.style.left = randLeft + "px";
+            enemy.style.height = 100 + "px";
+            enemy.style.background = "transparent";
+
+
+        }, 900);
+
+        let score = 0;
+        const startBtn = document.querySelector(".startBtn");
+
+        startBtn.addEventListener("click", () => {
+            container.appendChild(enemy);
+           
+
+            startBtn.innerText = "SCORE: " + score;
+        });
+
+
+        var audio = document.querySelector(".audio");
+
+        function playAudio() {
+            audio.play();
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
